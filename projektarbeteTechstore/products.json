@@ -1,0 +1,56 @@
+[
+    {
+        "title": "iPhone X",
+        "description": "Last years phone from Apple with a beautiful all display front.",
+        "image": "iPhoneX.png",
+        "price": 11495
+    },{
+        "title": "One Plus 5",
+        "description": "Sleek and powerful smartphone from One Plus.",
+        "image": "OnePlus5.png",
+        "price": 4995
+    },{
+        "title": "Galaxy S8",
+        "description": "Really cool edge to edge smartphone from Samsung.",
+        "image": "SamsungS8.png",
+        "price": 7990
+    },{
+        "title": "LG V30",
+        "description": "Super nice and beautiful smartphone from LG.",
+        "image": "LGV30.png",
+        "price": 7495
+    },{
+        "title": "SAMSUNG GALAXY S20 5G",
+        "description": "Super nice and beautiful smartphone from LG.",
+        "image": "galaxy-s20-5G.png",
+        "price": 10995
+    },{
+        "title": "HUAWEI P40 PRO",
+        "description": "With new improved 50Mp camera.",
+        "image": "huawei-p40.png",
+        "price": 8995
+    },{
+        "title": "ONEPLUS 8",
+        "description": "Fluid display and 48MP triple camera.",
+        "image": "oneplus-8.jpg",
+        "price": 7695
+    },{
+        "title": "SAMSUNG GALAXY Z FLIP",
+        "description": "With its foldable screen, the Galaxy Z Flip opens up new possibilities.",
+        "image": "samsung-galaxy-z-flip.png",
+        "price": 13995
+
+    },{
+        "title": "SONY XPERIA 1 II 5G",
+        "description": "The latest technology and 5G connectivity.",
+        "image": "sony-experia-5g.png",
+        "price": 11495
+
+    },{
+        "title": "APPLE IPHONE SE",
+        "description": "Fast and affordable phone.",
+        "image": "iphone-se.png",
+        "price": 5575
+
+    }
+]

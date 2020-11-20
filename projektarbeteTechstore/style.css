@@ -127,7 +127,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .pageTitle{
     display: flex;
@@ -159,9 +159,10 @@ main {
     border: 2px solid #5596F5; 
     align-items: center; 
     padding: 1rem;
-    margin: 0.5em; 
+    margin: 0.5em 1.5em;
     border-radius: 0.5em;
     background-color: #F5F5F5;
+    flex-basis: 10%;
 }
 .cardContainer.cardTitle{
     font-size: 15px;
@@ -339,13 +340,13 @@ main{
 }
 
       /* ----------------------------------- cart page -------------------------------*/
-      
 .main-cart{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     align-content: center;
-    justify-content: space-around;
+    align-items: center;
 }
 .pageTitle{
     margin-top: 150px;
@@ -359,7 +360,6 @@ main{
 }
 .main {
     display: flex;
-    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -372,22 +372,24 @@ main{
     width: fit-content;
     border: 2px solid #5596F5; 
     align-items: center; 
-    margin: 1em; 
-    padding: 1em 1em; 
+    margin: 0.5em; 
+    padding: 0.5em 0.5em; 
     border-radius: 0.5em;
     background-color: #F5F5F5;
 }
 .cardContainer img{
     object-fit: contain;
-    max-height: 180px;
+    max-height: 160px;
 }
 .imageContainer{
     overflow: hidden;
     object-fit: contain;
+    min-width: 150px;
 }
 .cardTitle{
     font-size: 15px;
     font-weight: bold;
+    min-height: 35px;
 }
 .cardContainer .price{
     font-size: 14px;
@@ -412,6 +414,7 @@ main{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 1em;
 }
 .total-price .btn{
       margin: auto;
@@ -419,12 +422,14 @@ main{
       width: 200px;
       color: #FFFFFF;
       font-size: 15px;
-      margin-bottom: 2em;
+      margin-top: 1em;
+  }
+  #emptyCard{
+      display: none;
   }
 }
     
 /* Desktop (992px and up) */
-
 @media (min-width:992px){
 
 nav {
@@ -484,13 +489,12 @@ nav .fa{
     cursor: pointer;
     text-decoration: none;
 }
-
 .main-container {
     display:flex; 
     flex-direction: column; 
     align-items: center; 
     height: 100vh;
-    padding: 4em 1em 1em 1em;
+    padding: 4em 1em 0.75em 0.75em;
     background-color: #F5F5F5;
     margin: auto;
 }
@@ -502,6 +506,7 @@ nav .fa{
 .imageContainer {
     overflow: hidden;
     object-fit: contain;
+    /* height: 100%; */
 }
 .title {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -575,6 +580,7 @@ nav .fa{
 .imageContainer{
     overflow: hidden;
     object-fit: contain;
+    min-width: 180px;
 }
 .cardContainer img{
     object-fit: contain;

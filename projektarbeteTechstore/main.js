@@ -1,8 +1,4 @@
-
-
 var listOfProducts;
- 
-
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
     fetch("./products.json")
@@ -12,15 +8,12 @@ function loadProducts() {
     .then(function(products) {
         listOfProducts = products;
         addProductsToWebpage(listOfProducts);
-      
     });
 }
-
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
 }
-
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage(listOfProducts) {
 	const body = document.body;
@@ -53,55 +46,54 @@ function addProductsToWebpage(listOfProducts) {
 	container.appendChild(productPrice);
 	const btn = document.createElement("button");
 	btn.className = "btnAddCart";
-	btn.innerHTML = `<i class="fa fa-cart-plus" style="font-size:30px;color:black"></i>&nbsp
-	Lägg till kundvagnen`;
+	btn.innerHTML = `<i class="fa fa-cart-plus" style="font-size:24px;color:white"></i>&nbsp
+	Lägg till i kundvagnen`;
 	container.appendChild(btn);
 	btn.addEventListener ("click", e => {
 			addToCart(product);
 	});
 function onLoadCartNumbers() {
-	const productNumbers = localStorage.getItem('cartNumbers');
+		const productNumbers = localStorage.getItem('cartNumbers');
 
-	if (productNumbers) {
-		document.querySelector('.cart-icon span').textContent = productNumbers;
+		if (productNumbers) {
+			document.querySelector('.cart-icon span').textContent = productNumbers;
 }
 }
 function addToCart (product){
-let productsStorage = localStorage.getItem("products");
-let products = [];
-if (productsStorage) {
-						products = JSON.parse(productsStorage);
-					// products = productsObj.products;
-					let isNewProduct = true;
-	for (let i = 0; i < products.length; i++) {
+		let productsStorage = localStorage.getItem("products");
+		let products = [];
+		if (productsStorage) {
+  	products = JSON.parse(productsStorage);				
+	  let isNewProduct = true;
+	  for (let i = 0; i < products.length; i++) {
 			const element =  products[i];
-			if (element.title === product.title) {
-					element.quantity = element.quantity +1
-					isNewProduct = false;
-			} 
+		if (element.title === product.title) {
+			element.quantity = element.quantity +1
+			isNewProduct = false;
+		} 
 	}
-	if (isNewProduct){
+		if (isNewProduct){
 			products.push(product)
 			products[products.length -1].quantity = 1;
 	}
 	} else {
-	products.push(product)
-	products[0].quantity = 1;
+			products.push(product)
+			products[0].quantity = 1;
 	}
 	localStorage.setItem("products", JSON.stringify(products))
-	let cardQuantity = 0;
-	products.forEach((product) => {
+			let cardQuantity = 0;
+			products.forEach((product) => {
 			cardQuantity = cardQuantity + product.quantity;
 	})
 	document.querySelectorAll(".cart-icon span")[0].innerText = cardQuantity;
 }
-		function cardQuantity(){
-		let cardQuantity = 0;
-		const productsStorage = localStorage.getItem("products");
+			function cardQuantity(){
+			let cardQuantity = 0;
+			const productsStorage = localStorage.getItem("products");
 	if (productsStorage) {
-		const products = JSON.parse(productsStorage);
-		products.forEach((product) => {
-		cardQuantity = cardQuantity + product.quantity
+			const products = JSON.parse(productsStorage);
+			products.forEach((product) => {
+			cardQuantity = cardQuantity + product.quantity
 		});
 	}
 	document.querySelectorAll(".cart-icon span")[0].innerText = cardQuantity;
